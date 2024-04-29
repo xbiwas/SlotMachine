@@ -1,3 +1,5 @@
+import random
+
 MAX_LINES = 3
 MIN_BET = 1
 MAX_BET = 100
@@ -49,7 +51,12 @@ def getBets():
 def main():    
     balance = deposit()
     lines = numberOfLines()
-    bets = getBets()
-    totalBet = lines * bets
+    while True:
+        bets = getBets()
+        totalBet = lines * bets
+        if totalBet > balance:
+            print(f"You do not have enough balance to bet that amount, your current balance is {balance}")
+        else:
+            break
     print(f"You are betting ${bets} on {lines} lines. Your total betting is ${totalBet}. your current balance is {balance - totalBet}")
 main()
