@@ -51,5 +51,5 @@ def main():
     lines = numberOfLines()
     bets = getBets()
     totalBet = lines * bets
-    print(f"You are betting ${bets} on {lines} lines. Your total betting is ${totalBet}.")
+    print(f"You are betting ${bets} on {lines} lines. Your total betting is ${totalBet}. your current balance is {balance - totalBet}")
 main()
